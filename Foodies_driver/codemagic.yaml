@@ -1,0 +1,15 @@
+workflows:
+  build-driver-app:
+    name: Build Foodies Driver App
+    instance_type: mac_mini_m1
+    environment:
+      flutter: stable
+      xcode: latest
+      cocoapods: default
+    scripts:
+      - name: Build Foodies_driver APK
+        script: |
+          flutter packages pub get
+          flutter build apk --release
+    artifacts:
+      - build/app/outputs/apk/release/app-release.apk

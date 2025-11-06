@@ -1,22 +1,14 @@
-# uber_eats_consumer
+# Foodie Customer App
 
-A new Flutter application.
+Aplicación para clientes de Foodie, un servicio de entrega de comida.
 
-## Getting Started
+## Actualizaciones Recientes
 
-This project is a starting point for a Flutter application.
+- Se han actualizado todas las dependencias a las últimas versiones estables para mejorar el rendimiento, la seguridad y la compatibilidad.
+- Se reemplazó el paquete obsoleto `progress_dialog_null_safe` por `sn_progress_dialog`.
+- Se eliminó la dependencia explícita de `intl` para resolver conflictos de versiones, permitiendo que `flutter_localizations` la gestione.
+- Se actualizaron los paquetes `http` y `uuid` a versiones más recientes.
 
-A few resources to get you started if this is your first Flutter project:
+## Despliegue con Codemagic
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials, samples, guidance on
-mobile development, and a full API reference.
-
-# Foodies
-
-# Foodies
-
-# Single_rest
+Este proyecto está configurado para ser compilado con Codemagic. El archivo de configuración `codemagic.yaml` se encuentra en la raíz del repositorio y contiene los pasos necesarios para construir los APKs de las tres aplicaciones (cliente, repartidor y restaurante).
