@@ -50,21 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'Place your key',
-    appId: 'Place your key',
-    messagingSenderId: 'Place your key',
-    projectId: 'Place your key',
-    storageBucket: 'Place your key',
+    apiKey: 'AIzaSyAEKkMSLg1Ah5jsnjZIYioswPquNHVfbfo',
+    appId: '1:509943156102:android:78717bb3089d9178983007',
+    messagingSenderId: '509943156102',
+    projectId: 'bd-deliveryapks',
+    storageBucket: 'bd-deliveryapks.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'Place your key',
-    appId: 'Place your key',
-    messagingSenderId: 'Place your key',
-    projectId: 'Place your key',
-    storageBucket: 'Place your key',
-    androidClientId: 'Place your key',
-    iosClientId: 'Place your key',
-    iosBundleId: 'Place your key',
+    apiKey: 'AIzaSyB7ceKSioD-mhozvMIlOUUxwkBhgxjIUdk',
+    appId: '1:509943156102:ios:12cb735dd9438716983007',
+    messagingSenderId: '509943156102',
+    projectId: 'bd-deliveryapks',
+    storageBucket: 'bd-deliveryapks.firebasestorage.app',
+    iosBundleId: 'com.foodies.restaurant.ios',
   );
+
 }
