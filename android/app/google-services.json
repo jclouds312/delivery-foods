@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "509943156102",
+    "project_id": "bd-deliveryapks",
+    "storage_bucket": "bd-deliveryapks.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509943156102:android:9701aaafb6b09f9e983007",
+        "android_client_info": {
+          "package_name": "com.foodies.customer.android"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEKkMSLg1Ah5jsnjZIYioswPquNHVfbfo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509943156102:android:6fa2f83fdda701e9983007",
+        "android_client_info": {
+          "package_name": "com.foodies.driver.android"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEKkMSLg1Ah5jsnjZIYioswPquNHVfbfo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509943156102:android:78717bb3089d9178983007",
+        "android_client_info": {
+          "package_name": "com.foodies.restaurant.android"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEKkMSLg1Ah5jsnjZIYioswPquNHVfbfo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

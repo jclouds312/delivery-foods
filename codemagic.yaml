@@ -1,0 +1,15 @@
+workflows:
+  build-restaurant-app:
+    name: Build Foodies Restaurant App
+    instance_type: mac_mini_m1
+    environment:
+      flutter: stable
+      xcode: latest
+      cocoapods: default
+    scripts:
+      - name: Build Foodies_restaurant APK
+        script: |
+          flutter packages pub get
+          flutter build apk --release
+    artifacts:
+      - build/app/outputs/apk/release/app-release.apk
