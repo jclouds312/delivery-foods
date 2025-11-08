@@ -209,10 +209,10 @@ class _LocationPermissionScreenState extends State<LocationPermissionScreen> {
                         });
                       },
                       style: ButtonStyle(
-                        padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+                        padding: WidgetStateProperty.all<EdgeInsetsGeometry>(
                           EdgeInsets.only(top: 12, bottom: 12),
                         ),
-                        shape: MaterialStateProperty.all<OutlinedBorder>(
+                        shape: WidgetStateProperty.all<OutlinedBorder>(
                           RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(25.0),
                             side: BorderSide(

@@ -42,10 +42,10 @@ class AuthScreen extends StatelessWidget {
                 }
               },
               style: ButtonStyle(
-                padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+                padding: WidgetStateProperty.all<EdgeInsetsGeometry>(
                   EdgeInsets.only(top: 5, bottom: 5),
                 ),
-                shape: MaterialStateProperty.all<OutlinedBorder>(
+                shape: WidgetStateProperty.all<OutlinedBorder>(
                   RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(25.0),
                     side: BorderSide(
@@ -124,10 +124,10 @@ class AuthScreen extends StatelessWidget {
                     push(context, SignUpScreen());
                   },
                   style: ButtonStyle(
-                    padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+                    padding: WidgetStateProperty.all<EdgeInsetsGeometry>(
                       EdgeInsets.only(top: 12, bottom: 12),
                     ),
-                    shape: MaterialStateProperty.all<OutlinedBorder>(
+                    shape: WidgetStateProperty.all<OutlinedBorder>(
                       RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(25.0),
                         side: BorderSide(

@@ -6,7 +6,6 @@ class Styles {
     return ThemeData(
       useMaterial3: false,
       primaryColor: isDarkTheme ? const Color(0xff131218) : Color(COLOR_PRIMARY),
-      indicatorColor: isDarkTheme ? const Color(0xff0E1D36) : const Color(0xffCBDCF8),
       hintColor: isDarkTheme ? Colors.white38 : Colors.black38,
       highlightColor: isDarkTheme ? Colors.white38 : Colors.black38,
       hoverColor: isDarkTheme ? const Color(0xff3A3A3B) : const Color(0xff4285F4),
@@ -21,18 +20,18 @@ class Styles {
           ? AppBarTheme(
               centerTitle: true,
               titleTextStyle: const TextStyle(color: Colors.white, fontWeight: FontWeight.normal),
-              color: Colors.transparent,
+              backgroundColor: Colors.transparent,
               elevation: 0,
               actionsIconTheme: IconThemeData(color: Color(COLOR_PRIMARY)),
               iconTheme: IconThemeData(color: Color(COLOR_PRIMARY)))
           : AppBarTheme(
               centerTitle: true,
               titleTextStyle: const TextStyle(color: Colors.black, fontWeight: FontWeight.normal),
-              color: Colors.transparent,
+              backgroundColor: Colors.transparent,
               elevation: 0,
               actionsIconTheme: IconThemeData(color: Color(COLOR_PRIMARY)),
               iconTheme: IconThemeData(color: Color(COLOR_PRIMARY))),
-      textSelectionTheme: TextSelectionThemeData(selectionColor: isDarkTheme ? Colors.white : Colors.black), colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.red).copyWith(background: isDarkTheme ? const Color(0xff131218) : const Color(0xffF1F5FB)),
+      textSelectionTheme: TextSelectionThemeData(selectionColor: isDarkTheme ? Colors.white : Colors.black), colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.red).copyWith(surface: isDarkTheme ? const Color(0xff131218) : const Color(0xffF1F5FB)), tabBarTheme: TabBarThemeData(indicatorColor: isDarkTheme ? const Color(0xff0E1D36) : const Color(0xffCBDCF8)),
     );
   }
 }

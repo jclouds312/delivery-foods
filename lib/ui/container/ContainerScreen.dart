@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:foodie_customer/AppGlobal.dart';
 import 'package:foodie_customer/constants.dart';
 import 'package:foodie_customer/main.dart';
-import 'package:foodie_customer/model/AddressModel.dart';
 import 'package:foodie_customer/model/CurrencyModel.dart';
 import 'package:foodie_customer/model/User.dart';
 import 'package:foodie_customer/services/FirebaseHelper.dart';
@@ -37,7 +36,6 @@ import 'package:foodie_customer/ui/wallet/walletScreen.dart';
 import 'package:foodie_customer/userPrefrence.dart';
 import 'package:foodie_customer/utils/DarkThemeProvider.dart';
 import 'package:geocoding/geocoding.dart';
-import 'package:geolocator/geolocator.dart';
 import 'package:provider/provider.dart';
 
 enum DrawerSelection {

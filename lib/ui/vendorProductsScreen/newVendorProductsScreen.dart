@@ -653,7 +653,7 @@ class _NewVendorProductsScreenState extends State<NewVendorProductsScreen> with 
                       //     : nonVegSwitch = false;
                     });
                   },
-                  activeColor: Colors.green,
+                  activeThumbColor: Colors.green,
                   activeTrackColor: const Color(0xffCAD1D8),
                   inactiveTrackColor: const Color(0xffCAD1D8),
                   inactiveThumbColor: const Color(0xff9091A4),
@@ -686,7 +686,7 @@ class _NewVendorProductsScreenState extends State<NewVendorProductsScreen> with 
                       nonVegSwitch = isOn;
                     });
                   },
-                  activeColor: Colors.red,
+                  activeThumbColor: Colors.red,
                   activeTrackColor: const Color(0xffCAD1D8),
                   inactiveTrackColor: const Color(0xffCAD1D8),
                   inactiveThumbColor: const Color(0xff9091A4),

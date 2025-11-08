@@ -59,7 +59,7 @@ class _DineInRestaurantDetailsScreenState extends State<DineInRestaurantDetailsS
 
   void _getUserLocation() async {
     setState(() {
-      position = LatLng(MyAppState.selectedPosotion!.location!.latitude, MyAppState.selectedPosotion.location!.longitude);
+      position = LatLng(MyAppState.selectedPosotion.location!.latitude, MyAppState.selectedPosotion.location!.longitude);
     });
   }
 

@@ -22,7 +22,6 @@ import 'package:foodie_customer/services/localDatabase.dart';
 import 'package:foodie_customer/ui/deliveryAddressScreen/DeliveryAddressScreen.dart';
 import 'package:foodie_customer/ui/productDetailsScreen/ProductDetailsScreen.dart';
 import 'package:foodie_customer/ui/vendorProductsScreen/newVendorProductsScreen.dart';
-import 'package:geolocator/geolocator.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

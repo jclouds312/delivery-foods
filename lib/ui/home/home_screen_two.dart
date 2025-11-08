@@ -343,11 +343,11 @@ class _HomeScreenTwoState extends State<HomeScreenTwo> {
                                         focusedBorder:
                                             OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: BorderSide(color: Color(COLOR_PRIMARY), width: 2.0)),
                                         errorBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(color: Theme.of(context).errorColor),
+                                          borderSide: BorderSide(color: Theme.of(context).colorScheme.error),
                                           borderRadius: BorderRadius.circular(30.0),
                                         ),
                                         focusedErrorBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(color: Theme.of(context).errorColor),
+                                          borderSide: BorderSide(color: Theme.of(context).colorScheme.error),
                                           borderRadius: BorderRadius.circular(30.0),
                                         ),
                                         enabledBorder: OutlineInputBorder(

@@ -6,7 +6,6 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:foodie_customer/constants.dart';
 import 'package:foodie_customer/firebase_options.dart';
@@ -24,8 +23,6 @@ import 'package:foodie_customer/userPrefrence.dart';
 import 'package:foodie_customer/utils/DarkThemeProvider.dart';
 import 'package:foodie_customer/utils/Styles.dart';
 import 'package:foodie_customer/utils/notification_service.dart';
-import 'package:foodie_customer/widget/permission_dialog.dart';
-import 'package:geolocator/geolocator.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
