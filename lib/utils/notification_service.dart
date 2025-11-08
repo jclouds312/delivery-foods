@@ -60,7 +60,7 @@ class NotificationService {
 
   static getToken() async {
     String? token = await FirebaseMessaging.instance.getToken();
-    return token!;
+    return token;
   }
 
   void display(RemoteMessage message) async {

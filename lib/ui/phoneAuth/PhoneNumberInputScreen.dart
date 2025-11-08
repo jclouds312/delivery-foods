@@ -593,22 +593,8 @@ class _PhoneNumberInputScreenState extends State<PhoneNumberInputScreen> {
                 userID: userCredential.user?.uid ?? '');
             String? errorMessage = await FireStoreUtils.firebaseCreateNewUser(user, referralCode??'');
             hideProgress();
-            if (errorMessage == null) {
-              MyAppState.currentUser = user;
-              if(MyAppState.currentUser!.shippingAddress != null && MyAppState.currentUser!.shippingAddress!.isNotEmpty){
-                if(MyAppState.currentUser!.shippingAddress!.where((element) => element.isDefault == true).isNotEmpty){
-                  MyAppState.selectedPosotion = MyAppState.currentUser!.shippingAddress!.where((element) => element.isDefault == true).single;
-                }else{
-                  MyAppState.selectedPosotion = MyAppState.currentUser!.shippingAddress!.first;
-                }
-                pushAndRemoveUntil(context, ContainerScreen(user: user), false);
-              }else{
-                pushAndRemoveUntil(context, LocationPermissionScreen(), false);
-              }
-            } else {
-              showAlertDialog(context, "failed".tr(), "Couldn't create new user with phone number.".tr(), true);
-            }
-          }
+            showAlertDialog(context, "failed".tr(), "Couldn't create new user with phone number.".tr(), true);
+                    }
         }
       },
     );

@@ -398,7 +398,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
                     VariantInfo? variantIno = widget.orderModel.products[index].variant_info;
                     List<dynamic>? addon = widget.orderModel.products[index].extras;
                     String extrasDisVal = '';
-                    for (int i = 0; i < addon!.length; i++) {
+                    for (int i = 0; i < addon.length; i++) {
                       extrasDisVal += '${addon[i].toString().replaceAll("\"", "")} ${(i == addon.length - 1) ? "" : ","}';
                     }
                     return Column(

@@ -1011,7 +1011,7 @@ class FireStoreUtils {
     var collection = FirebaseFirestore.instance.collection(Setting);
     var docSnapshot = await collection.doc('placeHolderImage').get();
     Map<String, dynamic>? data = docSnapshot.data();
-    var value = data?['image'];
+    var value = data['image'];
     placeholderImage = value;
     return placeholderImage;
   }

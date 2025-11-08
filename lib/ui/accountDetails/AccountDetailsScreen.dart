@@ -279,7 +279,7 @@ class _AccountDetailsScreenState extends State<AccountDetailsScreen> {
             deleteUser: false,
           ),
         );
-        if (result != null && result) {
+        if (result) {
           await showProgress(context, "Saving details...".tr(), false);
           await _updateUser();
           await hideProgress();
@@ -293,7 +293,7 @@ class _AccountDetailsScreenState extends State<AccountDetailsScreen> {
             deleteUser: false,
           ),
         );
-        if (result != null && result) {
+        if (result) {
           await showProgress(context, 'Saving details...'.tr(), false);
           await _updateUser();
           await hideProgress();

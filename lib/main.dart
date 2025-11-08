@@ -204,40 +204,36 @@ class OnBoardingState extends State<OnBoarding> {
       auth.User? firebaseUser = auth.FirebaseAuth.instance.currentUser;
       if (firebaseUser != null) {
         User? user = await FireStoreUtils.getCurrentUser(firebaseUser.uid);
-        if (user != null) {
-          if (user.role == USER_ROLE_CUSTOMER) {
-            if (user.active) {
-              user.active = true;
-              user.role = USER_ROLE_CUSTOMER;
-              user.fcmToken = await FireStoreUtils.firebaseMessaging.getToken() ?? '';
-              await FireStoreUtils.updateCurrentUser(user);
-              MyAppState.currentUser = user;
-              if(MyAppState.currentUser!.shippingAddress != null && MyAppState.currentUser!.shippingAddress!.isNotEmpty){
-                if(MyAppState.currentUser!.shippingAddress!.where((element) => element.isDefault == true).isNotEmpty){
-                  MyAppState.selectedPosotion = MyAppState.currentUser!.shippingAddress!.where((element) => element.isDefault == true).single;
-                }else{
-                  MyAppState.selectedPosotion = MyAppState.currentUser!.shippingAddress!.first;
-                }
-                pushReplacement(context, ContainerScreen(user: user));
+        if (user.role == USER_ROLE_CUSTOMER) {
+          if (user.active) {
+            user.active = true;
+            user.role = USER_ROLE_CUSTOMER;
+            user.fcmToken = await FireStoreUtils.firebaseMessaging.getToken() ?? '';
+            await FireStoreUtils.updateCurrentUser(user);
+            MyAppState.currentUser = user;
+            if(MyAppState.currentUser!.shippingAddress != null && MyAppState.currentUser!.shippingAddress!.isNotEmpty){
+              if(MyAppState.currentUser!.shippingAddress!.where((element) => element.isDefault == true).isNotEmpty){
+                MyAppState.selectedPosotion = MyAppState.currentUser!.shippingAddress!.where((element) => element.isDefault == true).single;
               }else{
-                pushAndRemoveUntil(context, LocationPermissionScreen(), false);
+                MyAppState.selectedPosotion = MyAppState.currentUser!.shippingAddress!.first;
               }
-            } else {
-              user.lastOnlineTimestamp = Timestamp.now();
-              user.fcmToken = "";
-              await FireStoreUtils.updateCurrentUser(user);
-              await auth.FirebaseAuth.instance.signOut();
-              MyAppState.currentUser = null;
-              Provider.of<CartDatabase>(context, listen: false).deleteAllProducts();
-              pushAndRemoveUntil(context, AuthScreen(), false);
+              pushReplacement(context, ContainerScreen(user: user));
+            }else{
+              pushAndRemoveUntil(context, LocationPermissionScreen(), false);
             }
           } else {
-            pushReplacement(context, AuthScreen());
+            user.lastOnlineTimestamp = Timestamp.now();
+            user.fcmToken = "";
+            await FireStoreUtils.updateCurrentUser(user);
+            await auth.FirebaseAuth.instance.signOut();
+            MyAppState.currentUser = null;
+            Provider.of<CartDatabase>(context, listen: false).deleteAllProducts();
+            pushAndRemoveUntil(context, AuthScreen(), false);
           }
         } else {
           pushReplacement(context, AuthScreen());
         }
-      } else {
+            } else {
         pushReplacement(context, AuthScreen());
       }
     } else {

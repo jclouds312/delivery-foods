@@ -309,7 +309,6 @@ class _NewVendorProductsScreenState extends State<NewVendorProductsScreen> with 
 
   datarow(ProductModel productModel) {
     var price = double.parse(productModel.price);
-    assert(price is double);
     return GestureDetector(
       behavior: HitTestBehavior.translucent,
       onTap: () async {

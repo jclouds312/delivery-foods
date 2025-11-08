@@ -146,7 +146,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         deleteUser: true,
                       ),
                     );
-                    if (result != null && result) {
+                    if (result) {
                       await showProgress(context, "Deleting account...".tr(), false);
                       await FireStoreUtils.deleteUser();
                       await hideProgress();

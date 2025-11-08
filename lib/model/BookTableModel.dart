@@ -47,7 +47,7 @@ class BookTableModel {
 
   factory BookTableModel.fromJson(Map<String, dynamic> parsedJson) {
     int guestVal = 0;
-    if (parsedJson['totalGuest'] == null || parsedJson['totalGuest'] == double.nan || parsedJson['totalGuest'] == double.infinity) {
+    if (parsedJson['totalGuest'] == null || parsedJson['totalGuest'] == double.infinity) {
       guestVal = 0;
     } else {
       if (parsedJson['totalGuest'] is String) {
